@@ -1,152 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dave Cloud Project</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fresh Home Cleaning</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
-
-    body{
-      background:#0f172a;
-      color:white;
-    }
-
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 10%;
-      background:#111827;
-    }
-
-    .logo{
-      font-size:24px;
-      font-weight:bold;
-      color:#38bdf8;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:20px;
-    }
-
-    .hero{
-      height:90vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-    }
-
-    .hero h1{
-      font-size:60px;
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      max-width:700px;
-      line-height:1.7;
-      color:#cbd5e1;
-      margin-bottom:30px;
-    }
-
-    .btn{
-      padding:15px 30px;
-      background:#38bdf8;
-      color:black;
-      text-decoration:none;
-      border-radius:8px;
-      font-weight:bold;
-    }
-
-    .features{
-      padding:80px 10%;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .card{
-      background:#1e293b;
-      padding:30px;
-      border-radius:10px;
-    }
-
-    .card h3{
-      margin-bottom:15px;
-      color:#38bdf8;
-    }
-
-    footer{
-      text-align:center;
-      padding:20px;
-      background:#111827;
-      margin-top:40px;
-    }
-  </style>
+<!-- LINK CSS FILE -->
+<link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">DaveCloud</div>
+<!-- NAVBAR -->
+<nav>
+  <h2>FreshHome</h2>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+  <ul>
+    <li>Home</li>
+    <li>Services</li>
+    <li>Pricing</li>
+    <li>Reviews</li>
+    <li>Contact</li>
+  </ul>
 
-  <section class="hero">
-    <h1>My First AWS Hosted Website</h1>
+  <button class="btn">Book Now</button>
+</nav>
 
-    <p>
-      Learning cloud engineering by building real projects using
-      AWS EC2, Linux, Nginx, networking, and web hosting.
-    </p>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>A Cleaner Home. A Healthier Life.</h1>
+    <p>Professional home & office cleaning services in Ghana you can trust.</p>
 
-    <a href="#" class="btn">Explore</a>
-  </section>
+    <div class="hero-buttons">
+      <button class="btn">Book Now</button>
+      <button class="btn secondary">Get Quote</button>
+    </div>
+  </div>
+</div>
 
-  <section class="features">
+<!-- QUICK BOOK -->
+<div class="quick-book">
+  <input type="text" placeholder="Location"/>
+  <select>
+    <option>Service Type</option>
+    <option>Home Cleaning</option>
+    <option>Deep Cleaning</option>
+    <option>Office Cleaning</option>
+  </select>
+  <input type="date"/>
+  <button class="btn">Check Availability</button>
+</div>
 
+<!-- HOW IT WORKS -->
+<section>
+  <h2 class="section-title">How It Works</h2>
+  <div class="grid">
+    <div class="card">1. Book a Service</div>
+    <div class="card">2. We Clean Your Space</div>
+    <div class="card">3. Enjoy a Fresh Home</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="card">Home Cleaning</div>
+    <div class="card">Deep Cleaning</div>
+    <div class="card">Office Cleaning</div>
+    <div class="card">Window Cleaning</div>
+    <div class="card">Move-in / Move-out</div>
+    <div class="card">Post Construction</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section>
+  <h2 class="section-title">Pricing Packages</h2>
+  <div class="grid">
     <div class="card">
-      <h3>AWS EC2</h3>
-      <p>
-        Launching and managing cloud servers on Amazon Web Services.
-      </p>
+      <h3>Basic</h3>
+      <p>Light cleaning services</p>
     </div>
 
     <div class="card">
-      <h3>Linux</h3>
-      <p>
-        Using Linux commands and server administration skills.
-      </p>
+      <h3>Standard</h3>
+      <p>Most popular package</p>
     </div>
 
     <div class="card">
-      <h3>Nginx</h3>
-      <p>
-        Hosting and serving websites using Nginx web server.
-      </p>
+      <h3>Premium</h3>
+      <p>Full deep cleaning</p>
     </div>
+  </div>
+</section>
 
-  </section>
+<!-- WHY US -->
+<section>
+  <h2 class="section-title">Why Choose Us</h2>
+  <div class="grid">
+    <div class="card">Verified Cleaners</div>
+    <div class="card">Eco-Friendly Products</div>
+    <div class="card">Affordable Pricing</div>
+    <div class="card">On-Time Service</div>
+  </div>
+</section>
 
-  <footer>
-    <p>Built by Dave • Hosted on AWS</p>
-  </footer>
+<!-- TESTIMONIALS -->
+<section>
+  <h2 class="section-title">Customer Reviews</h2>
+  <div class="grid">
+    <div class="card">"Very professional service!" - Ama</div>
+    <div class="card">"My house looks brand new!" - Kofi</div>
+    <div class="card">"Highly recommended!" - Efua</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Ready for a Cleaner Home?</h2>
+  <p>Book your cleaning service today</p>
+  <button class="btn">Book Now</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Fresh Home Cleaning. All rights reserved.</p>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whatsapp" onclick="openWhatsApp()">
+  WhatsApp
+</div>
+
+<script>
+function openWhatsApp() {
+  window.open("https://wa.me/233XXXXXXXXX", "_blank");
+}
+</script>
 
 </body>
 </html>
