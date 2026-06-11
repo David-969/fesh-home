@@ -1,144 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fresh Home Cleaning</title>
-
-<!-- LINK CSS FILE -->
-<link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamo Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h2>FreshHome</h2>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Mamo Store</div>
 
-  <ul>
-    <li>Home</li>
-    <li>Services</li>
-    <li>Pricing</li>
-    <li>Reviews</li>
-    <li>Contact</li>
-  </ul>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-  <button class="btn">Book Now</button>
-</nav>
+            <div class="cart">
+                🛒
+            </div>
+        </nav>
+    </header>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-text">
-    <h1>A Cleaner Home. A Healthier Life.</h1>
-    <p>Professional home & office cleaning services in Ghana you can trust.</p>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shop the Latest Trends</h1>
+            <p>Discover quality products at unbeatable prices.</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
 
-    <div class="hero-buttons">
-      <button class="btn">Book Now</button>
-      <button class="btn secondary">Get Quote</button>
-    </div>
-  </div>
-</div>
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Popular Categories</h2>
 
-<!-- QUICK BOOK -->
-<div class="quick-book">
-  <input type="text" placeholder="Location"/>
-  <select>
-    <option>Service Type</option>
-    <option>Home Cleaning</option>
-    <option>Deep Cleaning</option>
-    <option>Office Cleaning</option>
-  </select>
-  <input type="date"/>
-  <button class="btn">Check Availability</button>
-</div>
+        <div class="category-grid">
+            <div class="category-card">Fashion</div>
+            <div class="category-card">Electronics</div>
+            <div class="category-card">Home & Living</div>
+            <div class="category-card">Beauty</div>
+        </div>
+    </section>
 
-<!-- HOW IT WORKS -->
-<section>
-  <h2 class="section-title">How It Works</h2>
-  <div class="grid">
-    <div class="card">1. Book a Service</div>
-    <div class="card">2. We Clean Your Space</div>
-    <div class="card">3. Enjoy a Fresh Home</div>
-  </div>
-</section>
+    <!-- Products -->
+    <section class="products">
+        <h2>Featured Products</h2>
 
-<!-- SERVICES -->
-<section>
-  <h2 class="section-title">Our Services</h2>
-  <div class="grid">
-    <div class="card">Home Cleaning</div>
-    <div class="card">Deep Cleaning</div>
-    <div class="card">Office Cleaning</div>
-    <div class="card">Window Cleaning</div>
-    <div class="card">Move-in / Move-out</div>
-    <div class="card">Post Construction</div>
-  </div>
-</section>
+        <div class="product-grid">
 
-<!-- PRICING -->
-<section>
-  <h2 class="section-title">Pricing Packages</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Basic</h3>
-      <p>Light cleaning services</p>
-    </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Product Name</h3>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </div>
 
-    <div class="card">
-      <h3>Standard</h3>
-      <p>Most popular package</p>
-    </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Product Name</h3>
+                <p>$79.99</p>
+                <button>Add to Cart</button>
+            </div>
 
-    <div class="card">
-      <h3>Premium</h3>
-      <p>Full deep cleaning</p>
-    </div>
-  </div>
-</section>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Product Name</h3>
+                <p>$99.99</p>
+                <button>Add to Cart</button>
+            </div>
 
-<!-- WHY US -->
-<section>
-  <h2 class="section-title">Why Choose Us</h2>
-  <div class="grid">
-    <div class="card">Verified Cleaners</div>
-    <div class="card">Eco-Friendly Products</div>
-    <div class="card">Affordable Pricing</div>
-    <div class="card">On-Time Service</div>
-  </div>
-</section>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Product Name</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
 
-<!-- TESTIMONIALS -->
-<section>
-  <h2 class="section-title">Customer Reviews</h2>
-  <div class="grid">
-    <div class="card">"Very professional service!" - Ama</div>
-    <div class="card">"My house looks brand new!" - Kofi</div>
-    <div class="card">"Highly recommended!" - Efua</div>
-  </div>
-</section>
+        </div>
+    </section>
 
-<!-- CTA -->
-<div class="cta">
-  <h2>Ready for a Cleaner Home?</h2>
-  <p>Book your cleaning service today</p>
-  <button class="btn">Book Now</button>
-</div>
+    <!-- Banner -->
+    <section class="banner">
+        <h2>Free Delivery on Orders Above $100</h2>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Fresh Home Cleaning. All rights reserved.</p>
-</footer>
-
-<!-- WHATSAPP -->
-<div class="whatsapp" onclick="openWhatsApp()">
-  WhatsApp
-</div>
-
-<script>
-function openWhatsApp() {
-  window.open("https://wa.me/233XXXXXXXXX", "_blank");
-}
-</script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Mamo Store. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
