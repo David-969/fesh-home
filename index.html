@@ -1,101 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mamo Store</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloudOps Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#0b1220;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#60a5fa;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+    font-size:.95rem;
+}
+
+.btn{
+    background:#3b82f6;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+/* HERO */
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    padding:100px 8%;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    line-height:1.1;
+}
+
+.hero p{
+    color:#94a3b8;
+    margin:20px 0;
+    line-height:1.7;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(59,130,246,0.2);
+    color:#60a5fa;
+    padding:8px 15px;
+    border-radius:50px;
+    font-size:.85rem;
+    margin-bottom:20px;
+}
+
+.hero img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+
+/* SERVICES */
+.section{
+    padding:80px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:2.2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.card h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+/* ARCHITECTURE */
+.arch{
+    background:rgba(255,255,255,0.03);
+    padding:60px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.arch-box{
+    max-width:900px;
+    margin:auto;
+    background:#0f172a;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.08);
+    margin-top:30px;
+}
+
+/* STATUS */
+.status-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.status{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.green{color:#34d399;}
+.yellow{color:#fbbf24;}
+.red{color:#f87171;}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Mamo Store</div>
+<nav>
+    <div class="logo">CloudOps</div>
 
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Architecture</a></li>
+        <li><a href="#">Status</a></li>
+    </ul>
 
-            <div class="cart">
-                🛒
-            </div>
-        </nav>
-    </header>
+    <a class="btn" href="#">Deploy System</a>
+</nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Shop the Latest Trends</h1>
-            <p>Discover quality products at unbeatable prices.</p>
-            <button>Shop Now</button>
+<section class="hero">
+
+    <div>
+        <span class="badge">AWS Cloud Engineering Project</span>
+
+        <h1>Monitor, Deploy & Scale Cloud Infrastructure</h1>
+
+        <p>
+            A modern cloud engineering system designed to manage EC2 instances,
+            monitor performance, and automate deployments using AWS services.
+        </p>
+
+        <a class="btn" href="#">View Dashboard</a>
+    </div>
+
+    <div>
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200">
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="title">
+        <h2>Cloud Engineering Services</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>EC2 Monitoring</h3>
+            <p>Track CPU, memory, and system health in real-time.</p>
         </div>
-    </section>
 
-    <!-- Categories -->
-    <section class="categories">
-        <h2>Popular Categories</h2>
-
-        <div class="category-grid">
-            <div class="category-card">Fashion</div>
-            <div class="category-card">Electronics</div>
-            <div class="category-card">Home & Living</div>
-            <div class="category-card">Beauty</div>
+        <div class="card">
+            <h3>Auto Scaling</h3>
+            <p>Automatically scale infrastructure based on demand.</p>
         </div>
-    </section>
 
-    <!-- Products -->
-    <section class="products">
-        <h2>Featured Products</h2>
-
-        <div class="product-grid">
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="">
-                <h3>Product Name</h3>
-                <p>$49.99</p>
-                <button>Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="">
-                <h3>Product Name</h3>
-                <p>$79.99</p>
-                <button>Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="">
-                <h3>Product Name</h3>
-                <p>$99.99</p>
-                <button>Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300" alt="">
-                <h3>Product Name</h3>
-                <p>$39.99</p>
-                <button>Add to Cart</button>
-            </div>
-
+        <div class="card">
+            <h3>Security (IAM)</h3>
+            <p>Secure access control and least privilege policies.</p>
         </div>
-    </section>
 
-    <!-- Banner -->
-    <section class="banner">
-        <h2>Free Delivery on Orders Above $100</h2>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Mamo Store. All Rights Reserved.</p>
+        <div class="card">
+            <h3>CI/CD Pipelines</h3>
+            <p>Automated deployments using DevOps workflows.</p>
         </div>
-    </footer>
+
+    </div>
+
+</section>
+
+<section class="arch">
+
+    <h2>System Architecture</h2>
+
+    <div class="arch-box">
+        <p>
+            User → Route 53 → Load Balancer → EC2 → CloudWatch → S3 Backup
+        </p>
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="title">
+        <h2>System Health</h2>
+    </div>
+
+    <div class="status-grid">
+
+        <div class="status">
+            <h3 class="green">EC2</h3>
+            <p>Running</p>
+        </div>
+
+        <div class="status">
+            <h3 class="green">CPU</h3>
+            <p>Normal (12%)</p>
+        </div>
+
+        <div class="status">
+            <h3 class="yellow">Memory</h3>
+            <p>Moderate Usage</p>
+        </div>
+
+        <div class="status">
+            <h3 class="green">Security</h3>
+            <p>Protected</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    CloudOps © 2026 — Built for AWS Cloud Engineering Practice
+</footer>
 
 </body>
 </html>
