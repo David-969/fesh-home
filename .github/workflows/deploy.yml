@@ -19,10 +19,18 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-            cd "/home/ec2-user/fesh home"
+            echo "Starting deployment..."
 
+            # Go to project directory
+            cd "/home/ec2-user/fesh home" || exit
+
+            # Pull latest code
             git pull origin main
 
-            sudo cp -r * /usr/share/nginx/html/ 
+            # Deploy to Nginx
+            sudo cp -r * /usr/share/nginx/html/
+
+            # Restart Nginx (important for changes)
+            sudo systemctl restart nginx
 
             echo "Deployment completed at $(date)"
