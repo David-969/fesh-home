@@ -19,11 +19,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-           script: |
             cd "/home/ec2-user/fesh home"
 
-           git pull origin main
+            git pull origin main
 
             sudo cp -r * /usr/share/nginx/html/ 
 
-           echo "Deployment completed at $(date)"
+            echo "Deployment completed at $(date)"
