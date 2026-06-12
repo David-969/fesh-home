@@ -19,4 +19,11 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-           echo "GitHub Actions connected successfully at $(date)" >> /tmp/github-test.log 
+           script: |
+            cd "/home/ec2-user/fesh home"
+
+           git pull origin main
+
+           sudo cp -r index.html styles.css /usr/share/nginx/html/
+
+           echo "Deployment completed at $(date)"
