@@ -19,5 +19,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-            pwd
-            whoami
+           echo "GitHub Actions connected successfully at $(date)" >> /tmp/github-test.log 
